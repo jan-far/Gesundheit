@@ -10,7 +10,7 @@ const NavBar = () => {
     <Slide direction="right" in={true} mountOnEnter unmountOnExit timeout={500}>
       <div className={Styles.root} style={{ userSelect: "none" }}>
         <div className={Styles.left}>
-          <h1 className={Styles.logo}>HealthLance</h1>
+          <h1 className={Styles.logo}>Gesundheit</h1>
           <Link href="/">
             <div className={Styles.btn} unselectable="on">
               <HomeIcon fontSize="small" style={{ marginRight: 5 }} />

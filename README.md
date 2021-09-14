@@ -1,8 +1,6 @@
-# Healthlance App
+# Gesundheit App
 
-[![Codacy Badge](https://app.codacy.com/project/badge/Grade/147b75a9f218469abf70c17768cc3ea3)](https://www.codacy.com/gh/josiaharkson/healthlance/dashboard?utm_source=github.com&utm_medium=referral&utm_content=josiaharkson/healthlance&utm_campaign=Badge_Grade)
-
-> A web application designed to help individuals cut down or stop the abuse of drugs, alcohol, and other addictive (psychoactive) substances
+> A web application designed to help individuals maintain good health and check corona health status,cut down or stop the abuse of drugs, alcohol, and other addictive (psychoactive) substances
 
 ## Pre-Requisites
 
@@ -24,5 +22,7 @@
 ## Author
 
 - [Josiah Arkson](https://github.com/josiaharkson)
+- [ Isong ](https://github.com/isongjosiah)
+- [Farouk](https://github.com/janfar)
 
-### Live Application deployed on Vercel. https://healthlance.vercel.app/
+### Live Application deployed on Vercel. https://gesundheit.vercel.app/

@@ -52,7 +52,7 @@ const useStyles = makeStyles({
 });
 
 const Link = ({ text, to }) => {
-  const DOMAIN_NAME = "https://healthlance.herokuapp.com";
+  const DOMAIN_NAME = "https://gesundheit.herokuapp.com";
 
   return (
     <a
@@ -66,7 +66,7 @@ const Link = ({ text, to }) => {
 };
 
 const LinkXS = ({ to, text }) => {
-  const DOMAIN_NAME = "https://healthlance.herokuapp.com";
+  const DOMAIN_NAME = "https://gesundheit.herokuapp.com";
 
   return (
     <a
@@ -166,7 +166,7 @@ const NavBar = ({ isAuthenticated, logout }) => {
       >
         <div className={Styles.root}>
           <div className={Styles.left}>
-            <h1 className={Styles.logo}>HealthLance</h1>
+            <h1 className={Styles.logo}>Gesundheit</h1>
           </div>
           <Hidden only={["xs", "sm"]}>
             <div className={Styles.middle}>
@@ -202,7 +202,7 @@ const NavBar = ({ isAuthenticated, logout }) => {
       >
         <div className={Styles.root_trigger_bg}>
           <div className={Styles.left}>
-            <h1 className={Styles.logo}>HealthLance</h1>
+            <h1 className={Styles.logo}>Gesundheit</h1>
           </div>
           <Hidden only={["xs", "sm"]}>
             <div className={Styles.middle}>

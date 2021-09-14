@@ -43,7 +43,7 @@ const MainText = () => {
       >
         <div>
           <div className={Styles.text_second} style={{ color: "GrayText" }}>
-            Associated with use of Alcohol, tobacco products and other drugs
+            Associated with Corona virus, use of Alcohol, Tobacco products and other drugs
           </div>
           <div className={Styles.text_third} style={{ color: "black" }}>
             <div>
@@ -52,7 +52,7 @@ const MainText = () => {
             </div>
             <div>5 to 10 minuites</div>
           </div>
-          <Link href="/alcohol-substance-test">
+          <Link href="/assessment">
             <div className={Styles.button} style={{ background: secondary }}>
               <span>TAKE TEST NOW </span>
             </div>

@@ -94,7 +94,7 @@ const Index = () => {
       </Fab>
 
       <div className={Styles.copyright}>
-        &copy; {new Date().getFullYear()} HealthLance App. All Rights Reserved.
+        &copy; {new Date().getFullYear()} Gesundheit App. All Rights Reserved.
       </div>
     </div>
   );

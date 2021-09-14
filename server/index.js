@@ -11,7 +11,7 @@ const handle = nextApp.getRequestHandler();
 
 const config = require("./config");
 
-const MONGO_URI = process.env.MONGO_URI;
+const MONGO_URI = dev ? process.env.MONGO_URI_dev : process.env.MONGO_URI;
 
 nextApp.prepare().then(() => {
   let app = express();
@@ -33,7 +33,7 @@ nextApp.prepare().then(() => {
     return handle(req, res);
   });
 
-  app.listen(port, err => {
+  app.listen(port, (err) => {
     if (err) throw err;
     console.log(`> Ready on http://localhost:${port}`);
   });
