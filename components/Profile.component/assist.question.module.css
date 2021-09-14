@@ -1,0 +1,150 @@
+/* Feedback */
+.feedback_body {
+  margin-top: 100px;
+  padding: 20px 200px;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 400;
+}
+
+.feedback_title {
+  font-family: "Quicksand", sans-serif;
+  font-size: 36px;
+  margin-bottom: 14px;
+}
+.feedback_title_direction {
+  text-align: center;
+}
+
+.feedback_title_direction::before {
+  content: "Click on ";
+}
+
+.feedback_title_sub {
+  font-weight: 900;
+  font-size: 17px;
+  padding-bottom: 10px;
+  color: #4c0082;
+}
+
+.feedback_first_comp {
+  border: 1px solid rgba(128, 128, 128, 0.192);
+  background: rgba(128, 128, 128, 0.092);
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 70px;
+}
+
+.feedback_first_comp > div {
+  font-size: 19px;
+  padding: 8px 0;
+}
+
+.feedback_second_comp {
+  padding: 0;
+  margin-bottom: 70px;
+}
+
+.feedback_accordion_last_text {
+  font-weight: 700;
+  color: white;
+  background: #4c00827c;
+  padding: 10px;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.feedback_tree_title {
+  color: #4c0082;
+  font-size: 21px;
+  font-weight: 900;
+}
+
+.feedback_third_safer {
+  background: #4c0082;
+  color: white;
+  padding: 20px;
+  margin: 20px;
+  text-align: center;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 30px;
+}
+
+@media (max-width: 1280px) {
+  /* md */
+}
+
+@media (max-width: 960px) {
+  /* sm */
+
+  /* QUESTION ONE 1 */
+  .root_1 {
+    margin: 10px 60px;
+    margin-top: 0px;
+  }
+  .question_head {
+    font-size: 16px;
+  }
+
+  .question_head > span {
+    font-size: 10px;
+  }
+
+  /* QUESTION ONE 2 */
+  .root_2 {
+    margin: 10px 60px;
+    margin-top: 0px;
+  }
+
+  .root_2_question_name {
+    flex-basis: 70%;
+  }
+
+  .root_2_question_options {
+    flex-basis: 30%;
+  }
+
+  .root_Q_8_wrapper_sub {
+    font-size: smaller;
+  }
+
+  .feedback_body {
+    padding: 20px 50px;
+  }
+
+  .feedback_title {
+    font-size: 30px;
+  }
+
+  .feedback_first_comp > div {
+    font-size: 16px;
+  }
+
+  .feedback_title_direction::before {
+    content: "Tap ";
+  }
+
+  .feedback_tree_title {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 600px) {
+  /* xs */
+  /* QUESTION ONE 1 */
+  .root_1 {
+    margin: 6px;
+    margin-top: 0px;
+  }
+
+  /* QUESTION ONE 2 */
+  .root_2 {
+    margin: 6px;
+    margin-top: 0px;
+  }
+
+  .feedback_body {
+    padding: 20px;
+    margin-top: 70px;
+  }
+}

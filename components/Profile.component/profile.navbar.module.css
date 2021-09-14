@@ -1,0 +1,123 @@
+/* DEFAULT ROOT */
+.root {
+  padding: 35px 60px;
+  font-family: "Quicksand", sans-serif;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  color: #0e4274;
+  background-color: inherit;
+  justify-content: space-between;
+  align-items: center;
+
+  user-select: none;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-touch-callout: none;
+  -moz-user-select: none;
+}
+
+.left {
+  flex-basis: 10%;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+.middle {
+  flex-basis: 60%;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+.right {
+  flex-basis: 30%;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.logo {
+  margin: 0;
+  cursor: text;
+  font-family: "Comfortaa";
+  margin-right: 50px;
+
+  user-select: none;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-touch-callout: none;
+  -moz-user-select: none;
+}
+
+.btn {
+  margin: 0;
+  margin-left: 25px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  border-bottom: 0px solid white;
+  padding-bottom: 4px;
+  border-bottom: 2px solid rgba(128, 128, 128, 0);
+}
+
+.active_btn {
+  border-bottom-color: rgba(128, 128, 128, 1);
+}
+
+.root_trigger_bg {
+  font-family: "Quicksand", sans-serif;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  color: white;
+  background-color: #0e4274;
+  box-shadow: 0px 3px 5px #0e4274;
+  padding: 20px 60px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 1280px) {
+  /* md */
+}
+
+@media (max-width: 960px) {
+  /* sm */
+  .root {
+    padding: 10px 20px;
+  }
+
+  .root_trigger_bg {
+    padding: 10px 20px;
+  }
+
+  .logo {
+    font-size: 20px;
+    margin-right: 20px;
+  }
+
+  .btn {
+    float: right;
+    flex: 1;
+    text-align: center;
+    margin-left: 0;
+    padding-left: 0;
+    cursor: pointer;
+    font-size: 13px;
+    font-family: "Quicksand", sans-serif;
+  }
+}
+
+@media (max-width: 600px) {
+  /* xs */
+}

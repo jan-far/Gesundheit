@@ -1,0 +1,61 @@
+/* First Sub_nav Style - Progress Bar */
+.root_a {
+  margin: 0;
+  padding: 0 30px;
+  font-family: "Quicksand", sans-serif;
+  margin-top: 115px;
+}
+
+.root_a_qtn {
+  color: black;
+  font-size: 20px;
+  line-height: 1%;
+  font-weight: 600;
+}
+
+.btn {
+  border-radius: 1px;
+  color: red;
+}
+
+/* Second Sub_nav Style - NEXT BTN AND PREVIOUS BTN */
+.root_b {
+  margin: 0;
+  margin-bottom: 23px;
+  padding: 10px 30px;
+  padding-bottom: 20px;
+  font-family: "Quicksand", sans-serif;
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+  justify-content: space-between;
+  background: #fdfdfd;
+}
+
+@media (max-width: 1280px) {
+  /* md */
+}
+
+@media (max-width: 960px) {
+  /* sm */
+
+  /* First Sub_nav Style - Progress Bar */
+  .root_a {
+    margin-top: 95px;
+    padding: 0 20px;
+  }
+
+  .root_b {
+    padding: 5px 20px;
+    padding-bottom: 15px;
+  }
+}
+
+@media (max-width: 600px) {
+  /* xs */
+
+  /* First Sub_nav Style - Progress Bar */
+  .root_a_qtn {
+    font-size: 14px;
+  }
+}

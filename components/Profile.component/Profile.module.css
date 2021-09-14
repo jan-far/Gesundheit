@@ -1,0 +1,147 @@
+.root {
+  margin: 0;
+  padding: 0 50px;
+  padding-top: 80px;
+  font-family: "Comfortaa", sans-serif;
+}
+
+.list_wrapper {
+  background: rgba(241, 235, 235, 0.445);
+  padding: 10px;
+  margin: 10px 0;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  width: 60%;
+}
+
+.list_wrapper_name {
+  font-size: 20px;
+  font-family: "Comfortaa", sans-serif;
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 80%;
+}
+
+.list_wrapper_date {
+  font-size: 12px;
+  font-family: "Comfortaa", sans-serif;
+}
+
+.headerA {
+  margin-top: 50px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgb(231, 213, 213);
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  align-items: center;
+}
+
+.headerA_1 {
+  margin-left: 20px;
+}
+
+.name {
+  font-size: 40px;
+  font-family: "Comfortaa", sans-serif;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.title {
+  font-size: 30px;
+  color: #0e4274;
+  padding-top: 30px;
+}
+
+.buttons {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 60%;
+}
+
+.title_sub {
+  margin-top: 5px;
+  font-size: 20px;
+  padding: 5px;
+  width: 60%;
+}
+
+.title_sub span {
+  background: #0e4274;
+  color: #fff;
+  border-radius: 5px;
+  padding: 3px;
+  font-size: 14px;
+}
+
+.group_A {
+  border-left: 1px solid gray;
+  padding-left: 20px;
+}
+.email {
+  font-family: "Comfortaa", sans-serif;
+}
+
+@media (max-width: 1280px) {
+  /* md */
+}
+
+@media (max-width: 960px) {
+  /* sm */
+  .root {
+    margin: 0;
+    padding: 0 30px;
+    padding-top: 40px;
+  }
+
+  .name {
+    font-size: 25px;
+  }
+  .title {
+    font-size: 25px;
+    padding-top: 20px;
+  }
+
+  .title_sub {
+    width: 100%;
+    font-size: 17px;
+  }
+
+  .list_wrapper {
+    width: 100%;
+    padding: 10px;
+  }
+  .buttons {
+    width: 100%;
+  }
+
+  .list_wrapper_name {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 600px) {
+  /* xs */
+
+  .root {
+    margin: 0;
+    padding: 0 20px;
+    padding-top: 40px;
+  }
+
+  .title_sub {
+    font-size: 13px;
+  }
+}
