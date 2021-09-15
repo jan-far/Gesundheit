@@ -12,18 +12,30 @@ const Index = props => {
     <>
       <NavBar />
       <Head>
-        <title>Corona | Assessment</title>
+        <title>Gesundheit | Assessment</title>
       </Head>
       <div className="root">
         <div className="item">
           <div className="img bg-a">
-            <img src="/img/4.jpg" />
+            <img src="/img/1.jpg" />
           </div>
           {/* <img src="/img/3.jpg"/> */}
           <div className="second">
-            <Link href="/assessment">
+            <Link href="/corona">
               <Button color="primary" variant="contained">
-                Go Back
+                Corona Test
+              </Button>
+            </Link>
+          </div>
+        </div>
+        <div className="item">
+          <div className="img bg-b">
+            <img src="/img/2.jpg" />
+          </div>
+          <div className="second">
+            <Link href="/alcohol-substance-test">
+              <Button color="primary" variant="contained">
+                ASSIST Test
               </Button>
             </Link>
           </div>

@@ -1,0 +1,6 @@
+This favicon was generated using the following font:
+
+- Font Title: Kaisei Opti
+- Font Author: Copyright 2020 The Kaisei Project Authors (https://github.com/Font-Kai/Kaisei)
+- Font Source: http://fonts.gstatic.com/s/kaiseiopti/v1/QldKNThJphYb8_g6c2nlIFle7KlmxuHx.ttf
+- Font License: SIL Open Font License, 1.1 (http://scripts.sil.org/OFL))

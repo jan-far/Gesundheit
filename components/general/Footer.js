@@ -74,13 +74,12 @@ const Index = () => {
             </li>
           </ul>
         </div>
-        <div className={Styles.body_2}>
+        {/* <div className={Styles.body_2}>
           <div className={Styles.title}>Contact Us</div>
           <div className={Styles.sub}>
             For inquiry and support kindly send a message to{" "}
-            <b>arksonjosiah@gmail.com</b>
           </div>
-        </div>
+        </div> */}
       </div>
 
       <Fab
