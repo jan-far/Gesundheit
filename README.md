@@ -17,7 +17,7 @@
 - Frontend - (Next.js, React.js), Material UI, Redux, Axios, Swr
 - API - Next.js API Routing (REST)
 - Storage - MongoDB
-- Vercel For Hosting.
+- Heroku For Hosting.
 
 ## Author
 
