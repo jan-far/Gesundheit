@@ -24,12 +24,13 @@ function capitalizeName(s) {
   return s.charAt(0).toUpperCase() + s.slice(1);
 }
 
+let msg = "";
+let key = "";
+let type = "";
+
 module.exports = {
   login: async (req, res, next) => {
     const { emailorusername, password, member } = req.logInValue.body;
-    let msg = "";
-    let key = "";
-    let type = "";
 
     try {
       // Compare passwords
