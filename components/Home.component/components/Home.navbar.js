@@ -162,7 +162,7 @@ const NavBar = ({ isAuthenticated, logout }) => {
       >
         <div className={Styles.root}>
           <div className={Styles.left}>
-            <h1 className={Styles.logo}>HealthLance</h1>
+            <h1 className={Styles.logo}>Gesundheit</h1>
           </div>
           <Hidden only={["xs", "sm"]}>
             <div className={Styles.middle}>
@@ -198,7 +198,7 @@ const NavBar = ({ isAuthenticated, logout }) => {
       >
         <div className={Styles.root_trigger_bg}>
           <div className={Styles.left}>
-            <h1 className={Styles.logo}>HealthLance</h1>
+            <h1 className={Styles.logo}>Gesundheit</h1>
           </div>
           <Hidden only={["xs", "sm"]}>
             <div className={Styles.middle}>

@@ -13,7 +13,7 @@ function Index() {
   return (
     <>
       <Head>
-        <title>HealthLance | Login</title>
+        <title>Gesundheit | Login</title>
       </Head>
       <Login />
     </>

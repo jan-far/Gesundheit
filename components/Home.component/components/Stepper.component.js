@@ -16,7 +16,7 @@ const steps = [
     body: (
       <>
         {" "}
-        HealthLance Online Test is designed to determne an individuals level of
+        Gesundheit Online Test is designed to determne an individuals level of
         alcohol, drug and(or) substance use and the risks associated with such
         use. 8 questions (questionnaire format) are asked and all data provided
         are treated with strict confidentiality. Afer completing all questions,
@@ -34,7 +34,7 @@ const steps = [
     key: "02",
     body: (
       <>
-        HealthLance Online Test is an adptation of the WHO ASSIST (Alcohol,
+        Gesundheit Online Test is an adptation of the WHO ASSIST (Alcohol,
         Smoking and Substance Involvement Screening Test) Project. The ASSIST
         was designed to be culturally neutral and useable across a variety of
         cultures to screen for use of the following substances that fall into
@@ -123,7 +123,7 @@ export default function ImgMediaCard() {
         <div className={Styles.title}>About </div>
 
         <div className={Styles.subheader}>
-          HealthLance is a web application designed to help individuals cut down
+          Gesundheit is a web application designed to help individuals cut down
           or stop the abuse of alcohol, drugs & addictive (psychoactive)
           substances
         </div>

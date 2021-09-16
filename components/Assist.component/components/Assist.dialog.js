@@ -42,7 +42,7 @@ const Index = ({ open, handleClose, setLoading, router }) => {
   const onClickEnd = () => {
     setLoading(true);
     handleClose();
-    setTimeout(() => router.push("/"), 2000);
+    setTimeout(() => router.push("/assessment"), 2000);
   };
 
   return (

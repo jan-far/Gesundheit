@@ -1,0 +1,73 @@
+/* DEFAULT ROOT */
+.root {
+  padding: 15px 60px;
+  font-family: "Quicksand", sans-serif;
+  width: 100%;
+  position: fixed;
+  margin: 0;
+  top: 0;
+  z-index: 100;
+  color: white;
+  background-color: #0e4274;
+  box-shadow: 0px 3px 5px #0e4274;
+}
+
+.left {
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.logo {
+  margin: 0;
+  margin-right: 50px;
+  cursor: pointer;
+}
+
+.btn {
+  margin: 0;
+  margin-left: 25px;
+  font-family: "Quicksand", sans-serif;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  border-bottom: 0px solid white;
+  padding-bottom: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 1280px) {
+  /* md */
+}
+
+@media (max-width: 960px) {
+  /* sm */
+
+  .root {
+    padding: 15px 20px;
+    flex-direction: column;
+  }
+
+  .left {
+    display: flex;
+    flex: 1;
+  }
+
+  .logo {
+    flex: 3;
+    font-size: 20px;
+  }
+  .btn {
+    width: 100%;
+    cursor: pointer;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 600px) {
+  /* xs */
+}

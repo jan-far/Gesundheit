@@ -1,11 +1,11 @@
+require("dotenv").config();
 const bcrypt = require("bcryptjs");
 const axios = require("axios");
 const jwt = require("jsonwebtoken");
 
 const User = require("../models/User");
 
-const { serverRuntimeConfig } = require("next/config").default();
-const JWT_SECRET = serverRuntimeConfig.JWT_SECRET;
+const JWT_SECRET = process.env.JWT_SECRET;
 
 function generateToken(user) {
   return jwt.sign(
@@ -24,12 +24,13 @@ function capitalizeName(s) {
   return s.charAt(0).toUpperCase() + s.slice(1);
 }
 
+let msg = "";
+let key = "";
+let type = "";
+
 module.exports = {
   login: async (req, res, next) => {
     const { emailorusername, password, member } = req.logInValue.body;
-    let msg = "";
-    let key = "";
-    let type = "";
 
     try {
       // Compare passwords
@@ -107,6 +108,7 @@ module.exports = {
       };
       res.json({ success: true, token, user });
     } catch (e) {
+      console.log(e);
       const msg = "Connection Error";
       const key = "REGISTER";
       const type = "register";
