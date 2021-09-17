@@ -1,18 +1,17 @@
 import React from "react";
 import dynamic from "next/dynamic";
-
 import { FullScreenLoader } from "../components/general/IsLoading";
 
-const Corona = dynamic(() => import("../components/Corona.component"), {
+const Consult = dynamic(() => import("../components/Consult.component"), {
   loading: () => <FullScreenLoader />,
 });
 
-const corona = () => {
+const request_consult = () => {
   return (
     <div>
-      <Corona />
+      <Consult />
     </div>
-  )
-}
+  );
+};
 
-export default corona
+export default request_consult;

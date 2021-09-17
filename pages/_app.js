@@ -13,9 +13,11 @@ import { FullScreenLoader } from "../components/general/IsLoading";
 
 import { authorizeUser, logout } from "../store/actions/auth";
 import { getCurrentUser, validateToken } from "../services/authService";
+import { getConsultForms } from "../services/consultService";
+import { ConsultForms } from "../store/actions/consult";
 
 function MyApp({ Component, pageProps }) {
-  const store = useStore(state => state);
+  const store = useStore((state) => state);
   const [wait, setWait] = React.useState(true);
 
   React.useEffect(() => {
@@ -24,6 +26,16 @@ function MyApp({ Component, pageProps }) {
     if (jssStyles) {
       jssStyles.parentElement.removeChild(jssStyles);
     }
+
+    // Get Consult Forms
+    (async () => {
+      const forms = await getConsultForms();
+      if (forms.success) {
+        store.dispatch(ConsultForms(forms.formsData));
+      } else {
+        store.dispatch(ConsultForms(forms.nullData));
+      }
+    })();
 
     const user = getCurrentUser();
     if (user) {
@@ -51,10 +63,7 @@ function MyApp({ Component, pageProps }) {
     <React.Fragment>
       <Head>
         <title>Loading...</title>
-        <meta
-          name="viewport"
-          content="minimum-scale=1, initial-scale=1, width=device-width"
-        />
+        <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
       </Head>
       <PersistGate persistor={store.__persistor} loading={<FullScreenLoader />}>
         <ThemeProvider theme={theme}>
