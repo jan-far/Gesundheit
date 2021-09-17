@@ -17,7 +17,7 @@
 - Frontend - (Next.js, React.js), Material UI, Redux, Axios, Swr
 - API - Next.js API Routing (REST)
 - Storage - MongoDB
-- Vercel For Hosting.
+- Heroku For Hosting.
 
 ## Author
 
@@ -25,4 +25,4 @@
 - [ Isong ](https://github.com/isongjosiah)
 - [Farouk](https://github.com/janfar)
 
-### Live Application deployed on Vercel. https://gesundheit.vercel.app/
+### Live Application deployed on Vercel. https://gesundheit-app.herokuapp.com/
