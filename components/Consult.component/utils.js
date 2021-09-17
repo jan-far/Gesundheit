@@ -1,3 +1,3 @@
-export const getConsultFormIds = (formData) => {
-  return formData.map(form => form.id)
-}
+export const getConsultFormIds = formData => {
+  return formData?.length ? formData.map(form => form.id) : [];
+};

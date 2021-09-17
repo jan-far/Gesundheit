@@ -1,3 +1,7 @@
+.xc {
+  background-color: rgb(248, 236, 219);
+  width: 100%;
+}
 .root {
   margin: 0;
   padding: 0 60px;
@@ -6,7 +10,9 @@
   /* CLEAR THESE LATER */
   height: 500px;
   padding-top: 50px;
-  background-color: rgb(248, 236, 219);
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .title {

@@ -60,7 +60,7 @@ const style = css`
     object-fit: contain;
   }
   .bg-a {
-    background: #f0f0f0;
+    background: #fff;
   }
 
   .bg-b {

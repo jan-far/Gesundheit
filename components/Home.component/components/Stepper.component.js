@@ -123,8 +123,9 @@ export default function ImgMediaCard() {
         <div className={Styles.title}>About </div>
 
         <div className={Styles.subheader}>
-          Gesundheit is a web application designed to help individuals cut down
-          or stop the abuse of alcohol, drugs & addictive (psychoactive)
+          Gesundheit is an online platform designed to help individuals control
+          serious medical illnesses such as depression & PTSD, as well as cut
+          down or stop the abuse of alcohol, drugs & addictive (psychoactive)
           substances
         </div>
 
