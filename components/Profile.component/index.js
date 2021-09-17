@@ -148,7 +148,7 @@ function Index({ user }) {
         </div>
 
         <div className={Styles.headerB}>
-          <Link href="/alcohol-substance-test">
+          <Link href="/assessment?from=profile">
             <Button
               size={"small"}
               variant="contained"

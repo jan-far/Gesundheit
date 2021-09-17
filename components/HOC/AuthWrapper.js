@@ -18,7 +18,7 @@ const AuthProtect = (WrappedComponent, location, type) => {
       }
 
       if (Object.getOwnPropertyNames(user).length) {
-        console.log(323232, user);
+        // console.log(323232, user);
         if (user.paid === false) router.push("/profile");
       }
       return () => {};

@@ -25,7 +25,7 @@ export const validateToken = async () => {
     const res = await axios.get(URL, { headers: authHeader(token) });
     const user = res.data.user;
 
-    console.log(222222, { user });
+    // console.log(222222, { user });
     return { success: true, user: { ...user, token } };
   } catch (e) {
     return { success: false, user: {} };

@@ -6,8 +6,19 @@ import Link from "next/link";
 import NavBar from "./components/Assist.navbar";
 import styles from "./css/styles";
 import Button from "@material-ui/core/Button";
+import { withRouter } from "next/router";
 
-const Index = props => {
+const Index = (props) => {
+  const {
+    router: { query },
+  } = props;
+
+  const from = query?.from ? `/${query?.from}` : "/";
+
+  const toAlcohol =
+    from === "/profile" ? `/alcohol-substance-test?from=profile` : "/alcohol-substance-test";
+  const toCorona = from === "/profile" ? `/corona?from=profile` : "/corona";
+
   return (
     <>
       <NavBar />
@@ -21,7 +32,7 @@ const Index = props => {
           </div>
           {/* <img src="/img/3.jpg"/> */}
           <div className="second">
-            <Link href="/corona">
+            <Link href={toCorona}>
               <Button color="primary" variant="contained">
                 Corona Test
               </Button>
@@ -33,7 +44,7 @@ const Index = props => {
             <img src="/img/2.jpg" />
           </div>
           <div className="second">
-            <Link href="/alcohol-substance-test">
+            <Link href={toAlcohol}>
               <Button color="primary" variant="contained">
                 ASSIST Test
               </Button>
@@ -42,9 +53,17 @@ const Index = props => {
         </div>
       </div>
 
+      <div className="back">
+        <Link href={from}>
+          <Button color="primary" variant="contained">
+            Back
+          </Button>
+        </Link>
+      </div>
+
       <style jsx>{styles}</style>
     </>
   );
 };
 
-export default connect(null)(Index);
+export default connect(null)(withRouter(Index));

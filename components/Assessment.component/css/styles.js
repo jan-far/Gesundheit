@@ -75,6 +75,13 @@ const style = css`
     align-items: center;
     justify-content: center;
   }
+
+  .back {
+    position: fixed;
+    z-index: 5;
+    bottom: 15px;
+    left: 15px;
+  }
 `;
 
 export default style;
