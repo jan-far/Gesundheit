@@ -6,8 +6,12 @@ import Link from "next/link";
 import NavBar from "./components/Assist.navbar";
 import styles from "./css/styles";
 import Button from "@material-ui/core/Button";
+import { withRouter } from "next/router";
 
-const Index = props => {
+const Index = (props) => {
+  const {
+    router: { back },
+  } = props;
   return (
     <>
       <NavBar />
@@ -21,11 +25,9 @@ const Index = props => {
           </div>
           {/* <img src="/img/3.jpg"/> */}
           <div className="second">
-            <Link href="/assessment">
-              <Button color="primary" variant="contained">
-                Go Back
-              </Button>
-            </Link>
+            <Button color="primary" variant="contained" onClick={() => back()}>
+              Go Back
+            </Button>
           </div>
         </div>
       </div>
@@ -35,4 +37,4 @@ const Index = props => {
   );
 };
 
-export default connect(null)(Index);
+export default connect(null)(withRouter(Index));

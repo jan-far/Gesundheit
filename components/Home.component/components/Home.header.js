@@ -43,7 +43,8 @@ const MainText = () => {
       >
         <div>
           <div className={Styles.text_second} style={{ color: "GrayText" }}>
-            Associated with Corona virus, use of Alcohol, Tobacco products and other drugs
+            Associated with Depresion, PTSD, as well as use of Alcohol, Tobacco
+            products and other drugs
           </div>
           <div className={Styles.text_third} style={{ color: "black" }}>
             <div>
@@ -119,6 +120,23 @@ const MainImage = () => {
             <b>- SAFER (WHO)</b>
           </i>
         </div>
+
+        <div>
+          About
+          <span>
+            <b>8 million</b>
+          </span>{" "}
+          people have PTSD in a given year
+          <span>
+            <b>1 in 13</b>
+          </span>{" "}
+          people will develop PTSD at some point in their life
+          <i>
+            {" "}
+            <b>- Mental Health America (2020)</b>
+          </i>
+        </div>
+
         <div>
           Around{" "}
           <span>
@@ -130,21 +148,6 @@ const MainImage = () => {
           </span>{" "}
           people suffer from drug use disorders <br />{" "}
           <i>
-            <b>- Worldwide Drug Report (2020)</b>
-          </i>
-        </div>
-        <div>
-          Almost half of all people who inject drugs, an esimated{" "}
-          <span>
-            <b>5.5 million</b>
-          </span>{" "}
-          people worldwide, are living with{" "}
-          <span>
-            <b>hepatitis C</b>
-          </span>{" "}
-          <br />
-          <i>
-            {" "}
             <b>- Worldwide Drug Report (2020)</b>
           </i>
         </div>

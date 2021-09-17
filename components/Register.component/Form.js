@@ -108,7 +108,7 @@ function Register(props) {
     axios
       .post("/api/user/register", data)
       .then(res => {
-        console.log(res.data);
+        // console.log(res.data);
         if (res.data.success) {
           setGifIsLoading(true);
 

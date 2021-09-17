@@ -52,7 +52,7 @@ const useStyles = makeStyles({
 });
 
 const Link = ({ text, to }) => {
-  const DOMAIN_NAME = "https://gesundheit.herokuapp.com";
+  const DOMAIN_NAME = "https://gesundheit-app.herokuapp.com";
 
   return (
     <a
@@ -66,7 +66,7 @@ const Link = ({ text, to }) => {
 };
 
 const LinkXS = ({ to, text }) => {
-  const DOMAIN_NAME = "https://gesundheit.herokuapp.com";
+  const DOMAIN_NAME = "https://gesundheit-app.herokuapp.com";
 
   return (
     <a

@@ -4,6 +4,10 @@
   font-family: "Quicksand", sans-serif;
   font-size: 30px;
   padding-bottom: 50px;
+
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .title {

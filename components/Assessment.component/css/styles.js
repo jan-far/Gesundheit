@@ -60,7 +60,7 @@ const style = css`
     object-fit: contain;
   }
   .bg-a {
-    background: #f0f0f0;
+    background: #fff;
   }
 
   .bg-b {
@@ -74,6 +74,13 @@ const style = css`
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  .back {
+    position: fixed;
+    z-index: 5;
+    bottom: 15px;
+    left: 15px;
   }
 `;
 

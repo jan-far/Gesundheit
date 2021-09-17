@@ -11,6 +11,7 @@
   margin: 0;
   padding: 0;
   height: 80vh;
+  max-height: 800px;
   display: flex;
   flex: 1;
   flex-direction: column;
@@ -25,7 +26,7 @@
 .text_first {
   font-size: 45px;
   line-height: 120%;
-  padding-top: 50px;
+  padding-top: 100px;
   padding-bottom: 20px;
   font-weight: 900;
   color: #0e4274;
@@ -33,11 +34,13 @@
 }
 
 .text_second {
-  font-size: 30px;
+  font-size: 25px;
   line-height: 100%;
   font-weight: 900;
   text-align: center;
   padding-right: 80px;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 .text_third {

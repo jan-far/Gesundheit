@@ -82,7 +82,7 @@ const Index = props => {
       const res = await axios.get("/api/assist/substance/all");
 
       setSubstances(res.data);
-      console.log(222222, res.data);
+      // console.log(222222, res.data);
     } catch (e) {}
   };
 
