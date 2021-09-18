@@ -51,14 +51,14 @@ const useStyles = makeStyles({
   },
 });
 
-const Link = ({ text, to }) => {
+const Link = ({ text, to, color }) => {
   const DOMAIN_NAME = "https://gesundheit-app.herokuapp.com";
 
   return (
     <a
       href={`${DOMAIN_NAME}${to}`}
       className={Styles.btn}
-      style={{ textDecoration: "none" }}
+      style={{ textDecoration: "none", color: color ? color : "" }}
     >
       <span>{text}</span>{" "}
     </a>
@@ -206,8 +206,8 @@ const NavBar = ({ isAuthenticated, logout }) => {
           </div>
           <Hidden only={["xs", "sm"]}>
             <div className={Styles.middle}>
-              <Link text="About" to="#about" />
-              <Link text="Coming soon" to="#coming-soon" />
+              <Link color="#fff" text="About" to="#about" />
+              <Link color="#fff" text="Coming soon" to="#coming-soon" />
             </div>
           </Hidden>
 

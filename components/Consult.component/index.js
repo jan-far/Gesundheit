@@ -1,5 +1,6 @@
 import React, { useCallback } from "react";
 import axios from "axios";
+import Link from "next/link";
 import AuthWrapper from "../HOC/AuthWrapper";
 import Navbar from "../Profile.component/Profile.navbar";
 import { connect } from "react-redux";
@@ -11,26 +12,21 @@ import Avatar from "@material-ui/core/Avatar";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import Stepper from "./Stepper";
 
+import PropTypes from "prop-types";
+import List from "@material-ui/core/List";
+import ListItem from "@material-ui/core/ListItem";
+import ListItemAvatar from "@material-ui/core/ListItemAvatar";
+import ListItemText from "@material-ui/core/ListItemText";
+import DialogTitle from "@material-ui/core/DialogTitle";
+import Dialog from "@material-ui/core/Dialog";
+import PersonIcon from "@material-ui/icons/Person";
+import AddIcon from "@material-ui/icons/Add";
+import Typography from "@material-ui/core/Typography";
+import { blue } from "@material-ui/core/colors";
 
-
-
-import PropTypes from 'prop-types';
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemAvatar from '@material-ui/core/ListItemAvatar';
-import ListItemText from '@material-ui/core/ListItemText';
-import DialogTitle from '@material-ui/core/DialogTitle';
-import Dialog from '@material-ui/core/Dialog';
-import PersonIcon from '@material-ui/icons/Person';
-import AddIcon from '@material-ui/icons/Add';
-import Typography from '@material-ui/core/Typography';
-import { blue } from '@material-ui/core/colors';
-
-
-import DialogActions from '@material-ui/core/DialogActions';
-import DialogContent from '@material-ui/core/DialogContent';
-import DialogContentText from '@material-ui/core/DialogContentText';
-
+import DialogActions from "@material-ui/core/DialogActions";
+import DialogContent from "@material-ui/core/DialogContent";
+import DialogContentText from "@material-ui/core/DialogContentText";
 
 const useStyles = makeStyles(theme => ({
   active: {
@@ -302,14 +298,11 @@ const SingleQuestion = ({ set, item, n, selectedAnswers, on_select }) => {
   const classes = useStyles();
   const selected = selectedAnswers[set].questions[item.id];
 
-
   const [open, setOpen] = React.useState(false);
-
 
   console.log({ selected });
   return (
     <>
-
       <div className="q_body">
         <div className="q_1">
           <small>Question {n}</small>
@@ -420,6 +413,8 @@ const Index = props => {
   const ids = getConsultFormIds(consultForms);
   console.log("qwdwd", consultForms);
   const [loading, setloading] = React.useState(true);
+  const [loadingx, setloadingx] = React.useState(false);
+  const [success, setsuccess] = React.useState(false);
   const [view, setView] = React.useState(1);
 
   const [selectedAnswers, setselectedAnswers] = React.useState({
@@ -440,7 +435,6 @@ const Index = props => {
   const handleClose = () => {
     setOpen(false);
   };
-
 
   const getFormResponses = {
     patient: "5ngaxg9x4ls2i8x",
@@ -494,6 +488,7 @@ const Index = props => {
         country: "Nigeria",
       },
     };
+    setloadingx(true);
 
     try {
       const res = await axios.post(
@@ -510,8 +505,12 @@ const Index = props => {
       );
 
       console.log(res.data);
+      setloadingx(false);
+      setsuccess(true);
     } catch (e) {
       console.log(e?.response?.data);
+      setsuccess(true);
+      setloadingx(false);
     }
   };
 
@@ -541,7 +540,16 @@ const Index = props => {
               Associated with Depression and PTSD
             </span>
           </h1>
-          <h2>Powered by </h2>
+          <h2>
+            <span style={{ fontSize: 20 }}>Powered by</span> :{" "}
+            <a
+              href="https://www.pneuma.care/"
+              target="_blank"
+              style={{ color: "blue" }}
+            >
+              Pneumacare Telehealth Forms
+            </a>
+          </h2>
           {/* <div>
         {loadingForm ? (
           <p>loading...</p>
@@ -561,32 +569,59 @@ const Index = props => {
         )}
       </div> */}
 
+          <Dialog
+            open={open}
+            onClose={handleClose}
+            aria-labelledby="alert-dialog-title"
+            aria-describedby="alert-dialog-description"
+          >
+            <DialogTitle id="alert-dialog-title">Confirmation </DialogTitle>
+            <DialogContent>
+              <DialogContentText id="alert-dialog-description">
+                {success && "Submission was successful!"}
+                {!success && "Confirm Submision?"}
+              </DialogContentText>
+            </DialogContent>
+            <DialogActions>
+              {!success && (
+                <>
+                  {" "}
+                  <Button
+                    onClick={handleClose}
+                    color="primary"
+                    disabled={loadingx}
+                  >
+                    Disagree
+                  </Button>
+                  <Button
+                    onClick={sendReq}
+                    color="primary"
+                    disabled={loadingx}
+                    autoFocus
+                    color="primary"
+                    variant="contained"
+                  >
+                    {loadingx && <CircularProgress />}
 
-
-
-      <Dialog
-        open={open}
-        onClose={handleClose}
-        aria-labelledby="alert-dialog-title"
-        aria-describedby="alert-dialog-description"
-      >
-        <DialogTitle id="alert-dialog-title">{"Use Google's location service?"}</DialogTitle>
-        <DialogContent>
-          <DialogContentText id="alert-dialog-description">
-            Let Google help apps determine location. This means sending anonymous location data to
-            Google, even when no apps are running.
-          </DialogContentText>
-        </DialogContent>
-        <DialogActions>
-          <Button onClick={handleClose} color="primary">
-            Disagree
-          </Button>
-          <Button onClick={handleClose} color="primary" autoFocus>
-            Agree
-          </Button>
-        </DialogActions>
-      </Dialog>
-
+                    {!loadingx && "Agree"}
+                  </Button>{" "}
+                </>
+              )}
+              {success && (
+                <Link href="/profile">
+                  <Button
+                    color="primary"
+                    disabled={loadingx}
+                    autoFocus
+                    color="primary"
+                    variant="contained"
+                  >
+                    Continue
+                  </Button>
+                </Link>
+              )}
+            </DialogActions>
+          </Dialog>
 
           <Stepper
             steps={[{ id: 1 }, { id: 2 }]}
@@ -749,7 +784,7 @@ const Index = props => {
                       color="primary"
                       variant="outlined"
                       onClick={() => {
-                        sendReq();
+                        handleClickOpen();
                       }}
                     >
                       PROCEED{" "}
@@ -815,5 +850,3 @@ export default AuthWrapper(
   "/login",
   "private"
 );
-
-
